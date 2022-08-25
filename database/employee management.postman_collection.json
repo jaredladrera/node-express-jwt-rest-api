@@ -1,0 +1,188 @@
+{
+	"info": {
+		"_postman_id": "702397c1-6bb3-4ba1-bf22-07718d21ec3e",
+		"name": "employee management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create new employee",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOnsiaWQiOjEwLCJuYW1lIjoibGFuY2UgamFyZWQiLCJsYXN0bmFtZSI6ImNhYmlzY3VlbGFzIiwiYWdlIjoiMjYiLCJhZGRyZXNzIjoiYmlsdWNhbyBtYWx2YXIgYmF0YW5nYXMiLCJtb2JpbGVfbnVtYmVyIjoiMDk4NDY1NzI5MDQiLCJlbWFpbF9hZGRyZXNzIjoiam9qb0BnbWFpbC5jb20iLCJ1c2VybmFtZSI6ImxhbmNlMjEiLCJwaG90b191cmwiOiJodHRwczovL21lZGlhLWV4cDEubGljZG4uY29tL2Rtcy9pbWFnZS9DNEUwM0FRRWdyMVhkYXFyT3BBL3Byb2ZpbGUtZGlzcGxheXBob3RvLXNocmlua18yMDBfMjAwLzAvMTU1ODY5NzI0NDc2NT9lPTE2NTExMDQwMDAmdj1iZXRhJnQ9TDdsclhqQ0V1RU1jMGE1SlpmMlRiLXA1OXl6TkMtUG1MM0RmOEVvS240USIsImFjdGl2ZSI6InRydWUiLCJwb3NpdGlvbiI6InNvZnR3YXJlIGRldmVsb3BlciIsImRlcGFydG1lbnQiOiJTb2Z0d2FyZSBkZXZlbG9wbWVudCB0ZWFtIiwiYWNjb3VudF9zdGF0dXMiOiJhZG1pbiIsImNyZWF0ZWQiOiIyMDIyLTAzLTA3IDIyOjM1OjM4LjM2NyJ9LCJpYXQiOjE2NDg4ODM3NjcsImV4cCI6MTY0ODg4NzM2N30.NO-qhg8Vbf6vo-gSgfv8PKW_pZSv_yG19C33QjSzwYY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"lance jared\",\r\n    \"lastname\": \"cabiscuelas\",\r\n    \"age\": \"26\",\r\n    \"address\": \"bilucao malvar batangas\",\r\n    \"email_address\": \"jojo@gmail.com\",\r\n    \"username\": \"lance21\",\r\n    \"password\": \"lancejared21\",\r\n    \"photo_url\": \"https://media-exp1.licdn.com/dms/image/C4E03AQEgr1XdaqrOpA/profile-displayphoto-shrink_200_200/0/1558697244765?e=1651104000&v=beta&t=L7lrXjCEuEMc0a5JZf2Tb-p59yzNC-PmL3Df8EoKn4Q\",\r\n    \"active\": \"true\",\r\n    \"position\": \"software developer\",\r\n    \"department\": \"Software development team\",\r\n    \"mobile_number\": \"09846572904\",\r\n    \"account_status\": \"admin\",\r\n    \"test\": \"test lance\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/employee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"employee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all employees",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/employee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"employee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get employee by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/employee/10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"employee",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update employee by id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"lance jared updated\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/employee/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"employee",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete employee by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/employee/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"employee",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login employee",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOnsiaWQiOjEwLCJuYW1lIjoibGFuY2UgamFyZWQiLCJsYXN0bmFtZSI6ImNhYmlzY3VlbGFzIiwiYWdlIjoiMjYiLCJhZGRyZXNzIjoiYmlsdWNhbyBtYWx2YXIgYmF0YW5nYXMiLCJtb2JpbGVfbnVtYmVyIjoiMDk4NDY1NzI5MDQiLCJlbWFpbF9hZGRyZXNzIjoiam9qb0BnbWFpbC5jb20iLCJ1c2VybmFtZSI6ImxhbmNlMjEiLCJwaG90b191cmwiOiJodHRwczovL21lZGlhLWV4cDEubGljZG4uY29tL2Rtcy9pbWFnZS9DNEUwM0FRRWdyMVhkYXFyT3BBL3Byb2ZpbGUtZGlzcGxheXBob3RvLXNocmlua18yMDBfMjAwLzAvMTU1ODY5NzI0NDc2NT9lPTE2NTExMDQwMDAmdj1iZXRhJnQ9TDdsclhqQ0V1RU1jMGE1SlpmMlRiLXA1OXl6TkMtUG1MM0RmOEVvS240USIsImFjdGl2ZSI6InRydWUiLCJwb3NpdGlvbiI6InNvZnR3YXJlIGRldmVsb3BlciIsImRlcGFydG1lbnQiOiJTb2Z0d2FyZSBkZXZlbG9wbWVudCB0ZWFtIiwiYWNjb3VudF9zdGF0dXMiOiJhZG1pbiIsImNyZWF0ZWQiOiIyMDIyLTAzLTA3IDIyOjM1OjM4LjM2NyJ9LCJpYXQiOjE2NDY4MjU3OTQsImV4cCI6MTY0NjgyOTM5NH0.PBXtllmIyQXYPC1lN0rtu6KGf7s2kf1tMKQ14gfEkw4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"lance21\",\r\n    \"password\": \"lance21\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/employee/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"employee",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "no authentication request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
